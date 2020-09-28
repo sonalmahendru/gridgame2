@@ -6,7 +6,7 @@ var results_2 = ["images/fruit.png","images/fruit.png"];
 
 shuffle(results);
 shuffle(initial_images);
-var status = setInterval(checkStatus,500);
+var status = setInterval(checkStatus,700);
 
 function download_brochure(){
     //downloadbrochure on loading index.html
@@ -48,14 +48,15 @@ function result_text(){
 function onProductClick(index, id){
     attempts+=1;
     var imageHolder = document.getElementById(id);
+     imageHolder.src=results[index];
     if((results[index]=="images/durga.gif" || results[index] == "images/durga2.gif") && attempts<=2){//&& attempts<=2
         console.log("won")
         flag = 1;    
        // imageHolder.onload = setTimeout(checkResult,500);   
-    } else if (attempts>=2){
+    } else if (attempts>2){
        flag = 2;
     } 
-    imageHolder.src=results[index];
+   
 }
 
 function checkResult(){
