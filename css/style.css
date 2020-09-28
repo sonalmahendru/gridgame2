@@ -293,6 +293,7 @@ main{
 
 .main-content {
     height: 90%;
+    padding:0px;
 }
 
 .main {
@@ -301,7 +302,7 @@ main{
 	
 .game{
     display:flex;
-    height:20%;
+    height:25%;
 }
 
 .product-tile{
