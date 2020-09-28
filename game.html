@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Hide & Seek with Ganesha</title>
+</head>
+<body onload="init_load()">
+    <a id="downloadLink" href="brochure/brochure.pdf" download></a>
+    <div id="results" class="results">
+        <input type="text" name="result" id="result" value="0" >
+        <div id="found"></div>
+    </div>
+    <main>
+        <div class="header" id="landing">
+            <div class="landing-image">
+                <img id="logo" src="images/logo.png" alt="Xiaomi" class="icon-image">
+            </div>
+            <div class="landing-text">
+                <div id="landing-text-inner">
+                    <h1>
+                        Find Durga Ma in 2 attempts
+                    </h1>
+                </div>
+            </div>
+            
+        </div>
+        <div class="main-content" >
+           
+            <div class="game">
+                <div class="product-tile" id="tile1">
+                    <img id="prod1" src="" alt="" class="product-image" onclick="onProductClick(0,'prod1')"loop=false >
+                    
+                </div>   
+                <div class="product-tile" id="tile2">
+                    <img id="prod2" src="" alt="" class="product-image" onclick="onProductClick(1,'prod2')" >
+                </div>  
+            </div>
+            <div class="game">
+                <div class="product-tile" id="tile3">
+                    <img id="prod3" src="" alt="" class="product-image" onclick="onProductClick(2,'prod3')" >
+                </div>   
+                <div class="product-tile" id="tile4">
+                    <img id="prod4" src="" alt="" class="product-image" onclick="onProductClick(3,'prod4')" >
+                </div>  
+            </div>
+            <div class="game">
+                <div class="product-tile" id="tile3">
+                    <img id="prod5" src="" alt="" class="product-image" onclick="onProductClick(4,'prod5')" >
+                </div>   
+                <div class="product-tile" id="tile4">
+                    <img id="prod6" src="" alt="" class="product-image" onclick="onProductClick(5,'prod6')" >
+                </div>  
+            </div>
+            <div class="game">
+                <div class="product-tile" id="tile3">
+                    <img id="prod7" src="" alt="" class="product-image" onclick="onProductClick(6,'prod7')" >
+                </div>   
+                <div class="product-tile" id="tile4">
+                    <img id="prod8" src="" alt="" class="product-image" onclick="onProductClick(7,'prod8')">
+                </div>  
+            </div>
+
+          <!-- <  <div class="filter">
+                <div class="filter-image">
+                    <img src="images/pookalam.png" alt="Pookalam" class="filter-image-pookalam">
+                </div>
+                <div class="filter-title">
+                    <h2>POOKALAM</h2>
+                </div>
+                <div class="filter-link">
+                   <a href="https://www.facebook.com/fbcameraeffects/testit/586220345391640/N2Q4ZGVlOWJiYzMwZWQ0ODRiNzk3NzhhZTJmMzc4NDU=/"><img src="images/facebook.png" alt="Open on Facebook" class="link-image"></a>
+                </div>
+                <div class="filter-link">
+                    <a href="https://www.instagram.com/ar/329511564910526/"><img src="images/insta.png" alt="Open on Instagram" class="link-image"></a>
+                </div>
+            </div>
+            <div class="filter">
+                <div class="filter-image">
+                    <img src="images/tiger.png" alt="Pulikali" class="filter-image-tiger">
+                </div>
+                <div class="filter-title">
+                    <h2>PULIKALI</h2>
+                </div>
+                <div class="filter-link">
+                    <a href="https://www.facebook.com/fbcameraeffects/testit/344062623289730/YjVkYjExYzA5ODU1NmIyM2MxNTBjZDM5ZDRlNTBiM2Y=/"><img src="images/facebook.png" alt="Open on Facebook" class="link-image"></a>
+                </div>
+                <div class="filter-link">
+                    <a href="https://www.instagram.com/ar/295632325077702/"><img src="images/insta.png" alt="Open on Instagram" class="link-image"></a>
+                </div>
+            </div>
+            <div class="filter">
+                <div class="filter-image">
+                    <img src="images/kathakali.png" alt="Kaikottikali" class="filter-image-kathakali">
+                </div>
+                <div class="filter-title">
+                    <h2>KAIKOTTIKALI</h2>
+                </div>
+                <div class="filter-link">
+                    <a href="https://www.facebook.com/fbcameraeffects/tryit/294790991826286/"><img src="images/facebook.png" alt="Open on Facebook" class="link-image"></a>
+                </div>
+                <div class="filter-link">
+                    <a href="https://www.instagram.com/ar/305003167419698/"><img src="images/insta.png" alt="Open on Instagram" class="link-image"></a>
+                </div>
+            </div>
+            <div class="filter">
+                <div class="filter-image">
+                    <img src="images/KathakHead.png" alt="KathakHead" class="filter-image-khead">
+                </div>
+                <div class="filter-title">
+                    <h2>KATHAK FACE</h2>
+                </div>
+                <div class="filter-link">
+                    <a href="https://www.facebook.com/fbcameraeffects/testit/306427434110392/ZjYxYjQ1Y2JhZDk4OWE3Y2MzNWFlNmE3MmI1ODkzNjQ=/"><img src="images/facebook.png" alt="Open on Facebook" class="link-image"></a>
+                </div>
+                <div class="filter-link">
+                    <a href="https://www.instagram.com/ar/995435177553426/?ch=MDE0MDU0MzkzMWI2ZTY1YTBjYzE2MWRlNjA3YWIzNjQ%3D"><img src="images/insta.png" alt="Open on Instagram" class="link-image"></a>
+                </div>
+            </div>
+            <div class="filter">
+                <div class="filter-image">
+                    <img src="images/mahabali_cutout.png" alt="Mahabali Asur" class="filter-image-asur">
+                </div>
+                <div class="filter-title">
+                    <h2>MAHABALI ASUR</h2>
+                </div>
+                <div class="filter-link">
+                    <a href="https://www.facebook.com/fbcameraeffects/tryit/1467773373430482/"><img src="images/facebook.png" alt="Open on Facebook" class="link-image"></a>
+                </div>
+                <div class="filter-link">
+                    <a href="https://www.instagram.com/ar/218779242890430/"><img src="images/insta.png" alt="Open on Instagram" class="link-image"></a>
+                </div>
+            </div>  >    -->
+        </div>
+        <!-- <div class="footer">
+            <div class="wishes">
+               <h1>
+                Xiaomi Wishes Everyone A Happy Onam!!!
+               </h1>
+            </div>
+        </div> -->
+       
+    </main>
+</body>
+</html>

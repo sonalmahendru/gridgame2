@@ -1,0 +1,278 @@
+@font-face{
+    font-family: proximanova;
+    src: url(../fonts/proximanova/proximanova-reg-webfont.ttf) format("truetype");
+}
+
+body{
+    margin: 0;
+    background:#f9e2d3;
+    font-family: proximanova;
+}
+
+h1{
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+h2{
+    font-weight: bold;
+    font-size: 1.15rem;
+    text-transform: uppercase; 
+}
+
+.results{
+    display:none
+}
+
+main{
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 30px 0 40px rgba(0,0,0,0.1),
+    -30px 0 40px rgba(0,0,0,0.1);
+    height: 100vh;
+}
+
+
+
+.icon-image{
+    width:90%;
+}
+
+
+.header{
+    display: flex;
+    height: 10vh;
+}
+
+.header div{
+    padding:0.5rem;
+}
+
+.main-content {
+    height: 90%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.main {
+    height: 50%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.winning-text{
+    height: 10%;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.landing-image{
+    flex:1;
+    order:2;
+    align-self: center;
+    padding:0.125rem;
+}
+
+.landing-text{
+    flex:9;
+    order:1;
+    text-align: center;
+    line-height: 2rem;
+}
+
+.game{
+    display:flex;
+    height:20%;
+}
+
+.product-tile{
+    flex:1;
+    text-align: center;
+    padding:2rem;
+}
+
+.product-image-mi10{
+    width: 60%;
+}
+
+.product-image-redmi8{
+    width:60%;
+}
+
+.product-image-purifier{
+    width: 60%;
+}
+
+.product-image-trimmer{
+    width: 60%
+}
+
+.product-image-powerbank{
+    width:60%
+}
+
+.product-image-band{
+    width: 60%
+}
+
+.product-image-tv{
+    width: 60%
+}
+
+.product-image-laptop{
+    width:60%
+}
+
+.main{
+    display: flex;
+}
+
+.ganesha{
+    flex: 1;
+   text-align: center;
+   padding: 1vh;
+   align-self:center;
+}
+
+
+.ganesha-image{
+    width: 80%;
+}
+
+.durga{
+    flex:3;
+    padding:1vh;
+    
+}
+
+.durga-image{
+    width:80%
+}
+
+.play{
+    width:15%
+}
+
+#container {
+	margin: 0px auto;
+	width: 70%;
+	height: 70%;
+	/*border: 10px #333 solid;*/
+}
+#videoElement {
+	width: 100%;
+	height: 100%;
+	/*background-color: #666;*/
+}
+
+#canvas{
+    
+	width: 100%;
+	height: 100%;
+}
+
+.frontpage{
+        background: url("../images/bg.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: 100%;
+        overflow: hidden;
+}
+
+
+/* 
+.filter{
+    display: flex;
+}
+.filter-image{
+    flex:1.2;
+    align-self: center;
+}
+
+.filter-image-asur{
+    flex:1.2;
+    align-self: center;
+    width: 65%;
+    padding-left: 0.5rem;
+}
+
+.filter-image-khead{
+    flex:1;
+    align-self: center;
+    width: 75%;
+    padding-left: 0.25rem;
+}
+
+.filter-image-kathakali{
+    flex:1;
+    align-self: center;
+    width: 60%;
+    padding-left: 0.75rem;
+}
+
+.filter-image-tiger{
+    flex:1;
+    align-self: center;
+    width: 73%;
+    padding-left: 0.5rem;
+}
+
+.filter-title{
+    flex:5;
+    align-self: center;
+}
+
+.filter-link{
+    flex:1;
+    align-self: center;
+}
+
+.link-image{
+    width:60%
+} */
+
+.footer{
+    padding-top:0.05rem;
+    text-align: center;
+    padding-bottom: 0rem;
+    height: 15vh;
+}
+
+@media only screen and (min-width: 530px){
+    main{
+        max-width: 600;
+    margin: auto;
+    box-shadow: 30px 0 40px rgba(0,0,0,0.1),
+    -30px 0 40px rgba(0,0,0,0.1);
+        height: 100vh;
+    }
+
+    .main-content {
+        height: 90%;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+   
+    .main {
+        height: 50%;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .winning-text{
+        height: 10%;
+        padding: 2rem;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .play{
+        width:10%
+    }
+    
+}

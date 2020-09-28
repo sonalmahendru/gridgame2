@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Hide & Seek with Ganesha</title>
+</head>
+<body onload="result_text()">
+    <script>
+                window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '826539421486313',
+    xfbml      : true,
+    version    : 'v8.0'
+  });
+};
+
+(function(d, s, id){
+   var js, fjs = d.getElementsByTagName(s)[0];
+   if (d.getElementById(id)) {return;}
+   js = d.createElement(s); js.id = id;
+   js.src = "//connect.facebook.net/en_US/sdk.js";
+   fjs.parentNode.insertBefore(js, fjs);
+ }(document, 'script', 'facebook-jssdk'));
+
+    </script>
+    <main>
+        <div class="header" id="landing">
+            <div class="landing-image">
+                <img id="logo" src="images/logo.png" alt="Xiaomi" class="icon-image">
+            </div>
+            <div class="landing-text">
+                <div id="landing-text-inner">
+                    <h1 id="landing-text-header">
+                        Congratulations on winning the exciting prize!! 
+                    </h1>
+                </div>
+            </div>
+            
+        </div>
+        <div class="winning-text" id="winning-text">
+           
+                Redeem it at a Xiaomi store and post your selfie on social media with #DurgaPoojaWithXiaomi
+                  
+        </div>
+        <div id="container">
+            <video autoplay="true" id="videoElement">
+            
+            </video>
+            <canvas id="canvas" width="640" height="480"></canvas><!--width="640" height="480"-->
+            <button id="snap">Snap Photo</button>
+            <a id="snapped_pic" href="" download></a>
+            <div id="share" class="share-socialmedia">
+                <button id="sharefb">Share on Facebook</button>
+                <button id="shareinsta">Share on Instagram</button>
+                <button id="reclick" onClick="retake()">Retake Photo</button>
+            </div>
+        </div>
+        
+       <div class="footer">
+       </div>
+    </main>
+    <script>
+ document.getElementById('sharefb').addEventListener('click', function() {
+  FB.ui({
+      method: 'share_open_graph',
+      action_type: 'og.shares',
+      action_properties: JSON.stringify({
+          object : {
+             'og:url': "https://sonalmahendru.github.io",
+             'og:title': "test",
+             'og:description': "description",
+             'og:og:image:width': '2560',
+             'og:image:height': '960',
+             'og:image': user_pic
+          }
+      })
+  });
+});
+    </script>
+    <script src="js/camerascript.js"></script>
+</body>
