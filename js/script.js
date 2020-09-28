@@ -20,9 +20,9 @@ function play_clicked(){
 function init_load(){
     
     var videosrc = document.getElementById("video1"); 
-   // videosrc.play();
+   videosrc.play();
     var videosrc2 = document.getElementById("video2"); 
-  // videosrc2.play();
+  videosrc2.play();
     
     var game_flag = localStorage.getItem("flag");
     var result = localStorage.getItem("result");
@@ -68,7 +68,9 @@ function video2clicked(id){
     element.src = "images/mi10.mp4";
     element.className= "product-image-mi10";
     element.play();
-    flag =1;
+    if(id=="video2"){
+        flag =1;
+    }
 }
 
 function onProductClick(index, id){
