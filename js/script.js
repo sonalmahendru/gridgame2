@@ -78,7 +78,8 @@ function onProductClick(index, id){
     var imageHolder = document.getElementById("prod1");
         console.log(imageHolder);
         console.log(imageHolder.src);
-    imageHolder.src="images/mi10.webm";
+        
+        imageHolder.src="images/mi10.webm";
         console.log(imageHolder.src);
      document.getElementById("prod11").src = "images/mi10.webm";
     document.getElementById("video1").play();
@@ -86,8 +87,12 @@ function onProductClick(index, id){
     else{
     attempts+=1;
     var imageHolder = document.getElementById(id);
-    imageHolder.src=null;
-     imageHolder.src=results[index];
+    var parentNode = imageHolder.parentNode;
+        parentNode.removeChild(imageHolder);
+        var newImage = document.createElement("img");
+        newImage.src=results[index];
+        newImage.className="product-image-mi10";
+        parentNode.appendChild(newImage)
     if((results[index]=="images/durga.gif" || results[index] == "images/durga2.gif") && attempts<=2){//&& attempts<=2
         console.log("won")
         flag = 1;    
