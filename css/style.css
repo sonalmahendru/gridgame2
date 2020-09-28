@@ -1,12 +1,12 @@
 @font-face{
-    font-family: proximanova;
-    src: url(../fonts/proximanova/proximanova-reg-webfont.ttf) format("truetype");
+    font-family: enchanting;
+    src: url(../fonts/EnchantingCelebrations.ttf) format("truetype");
 }
 
 body{
     margin: 0;
     background:#f9e2d3;
-    font-family: proximanova;
+    font-family: enchanting;
 }
 
 h1{
