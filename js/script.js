@@ -56,13 +56,16 @@ function videoClicked(id){
   var newElement = document.createElement("video");
     newElement.src="images/mi10.webm";
     newElement.type="video/webm";
+    newElement.class="product-image-mi10";
     parentNode.appendChild(newElement);
     newElement.play();
 }
 
 function video2clicked(id){
-    this.src = "images/mi10.mp4";
-    this.play();
+    var element = document.getElementById(id);
+    element.src = "images/mi10.mp4";
+    element.class= "product-image-mi10";
+    element.play();
 }
 
 function onProductClick(index, id){
