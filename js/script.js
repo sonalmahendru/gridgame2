@@ -18,6 +18,10 @@ function play_clicked(){
 }
 
 function init_load(){
+    
+    var videosrc = document.getElementByID("prod1").addEventListener('click', onProductClick(0,'prod1')); 
+    var videosrc = document.getElementByID("prod11").addEventListener('click', onProductClick(0,'prod11')); 
+    
     var game_flag = localStorage.getItem("flag");
     var result = localStorage.getItem("result");
     if(game_flag == "2"){
