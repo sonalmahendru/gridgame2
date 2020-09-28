@@ -6,7 +6,7 @@ var results_2 = ["images/fruit.png","images/fruit.png"];
 
 shuffle(results);
 shuffle(initial_images);
-var status = setInterval(checkStatus,700);
+var status = setInterval(checkStatus,1000);
 
 function download_brochure(){
     //downloadbrochure on loading index.html
@@ -56,7 +56,7 @@ function videoClicked(id){
   var newElement = document.createElement("video");
     newElement.src="images/mi10.webm";
     newElement.type="video/webm";
-    newElement.class="product-image-mi10";
+    newElement.className="product-image-mi10";
     parentNode.appendChild(newElement);
     newElement.play();
 }
