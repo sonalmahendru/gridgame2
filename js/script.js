@@ -48,6 +48,7 @@ function result_text(){
 function onProductClick(index, id){
     attempts+=1;
     var imageHolder = document.getElementById(id);
+    imageHolder.src=null;
      imageHolder.src=results[index];
     if((results[index]=="images/durga.gif" || results[index] == "images/durga2.gif") && attempts<=2){//&& attempts<=2
         console.log("won")
