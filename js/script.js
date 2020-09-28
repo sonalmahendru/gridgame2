@@ -52,7 +52,7 @@ function result_text(){
 function onProductClick(index, id){
     if(index==0){
     var imageHolder = document.getElementById(id);
-    imageHolder.src="images/laptop.webm";
+    imageHolder.src="images/mi10.webm";
     }
     else{
     attempts+=1;
