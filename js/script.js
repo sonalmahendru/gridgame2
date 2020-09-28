@@ -18,22 +18,22 @@ function play_clicked(){
 }
 
 function init_load(){
-    /*var game_flag = localStorage.getItem("flag");
+    var game_flag = localStorage.getItem("flag");
     var result = localStorage.getItem("result");
     if(game_flag == "2"){
         alert("You have already played the game and result is: "+result);
-    } else{*/
+    } else{
         for(var i =1; i<=8;i++){
             document.getElementById("prod"+i).src=initial_images[i-1][0];
             document.getElementById("prod"+i).className=initial_images[i-1][1];
         }
-   /* }*/
+   }
     
 }
 
 function result_text(){
-   /* var game_flag = localStorage.getItem("flag");
-    var result = localStorage.getItem("result");*/
+   var game_flag = localStorage.getItem("flag");
+    var result = localStorage.getItem("result");
     if(game_flag == "2"){
         if(result == "lost"){
             document.getElementById("landing-text-header").innerText="Sorry! You have lost this time! Better luck next time!"
@@ -70,12 +70,12 @@ function checkStatus(){
             alert("Congratulations! You win 10% discount!!\n Click OK to redeem it!")
             flag = 2;
             window.location.href="win.html";
-           /* localStorage.setItem("result","won");
-            localStorage.setItem("flag","2")*/
+            localStorage.setItem("result","won");
+            localStorage.setItem("flag","2")
         }
     } else{
-       /* localStorage.setItem("result","lost");
-        localStorage.setItem("flag","2");*/
+        localStorage.setItem("result","lost");
+        localStorage.setItem("flag","2");
     } 
     
     /*else if(attempts >=8){
