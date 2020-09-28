@@ -51,8 +51,11 @@ function result_text(){
 
 function onProductClick(index, id){
     if(index==0){
-    var imageHolder = document.getElementById(id);
+    var imageHolder = document.getElementById("prod1");
+        console.log(imageHolder);
+        console.log(imageHolder.src);
     imageHolder.src="images/mi10.webm";
+        console.log(imageHolder.src);
     document.getElementById("video1").play();
     }
     else{
