@@ -1,7 +1,7 @@
 var flag = 0;
 var attempts = 0;
 var initial_images = [["images/mi10.gif","product-image-mi10"],["images/laptop.gif","product-image-laptop"],["images/tv.gif","product-image-tv"],["images/watch.gif","product-image-band"],["images/trimmer.gif","product-image-trimmer"],["images/purifier.gif","product-image-purifier"],["images/powerbank.gif","product-image-powerbank"],["images/note9.gif","product-image-redmi8"]]
-var results = ["images/sandesh1.gif","images/durga.gif","images/sandesh2.gif","images/noluck.gif","images/durga.gif","images/noluck.gif","images/sandesh1.gif","images/sandesh2.gif"]
+var results = ["images/sandesh1.gif","images/durga.gif","images/sandesh2.gif","images/noluck.gif","images/durga2.gif","images/noluck2.gif","images/sandesh1b.gif","images/sandesh2b.gif"]
 var results_2 = ["images/fruit.png","images/fruit.png"];
 
 shuffle(results);
@@ -48,12 +48,12 @@ function result_text(){
 function onProductClick(index, id){
     attempts+=1;
     var imageHolder = document.getElementById(id);
-    if(results[index]=="images/durga.gif" && attempts<=2){//&& attempts<=2
+    if((results[index]=="images/durga.gif" || results[index] == "images/durga2.gif") && attempts<=2){//&& attempts<=2
         console.log("won")
         flag = 1;    
        // imageHolder.onload = setTimeout(checkResult,500);   
-    } else{
-       // flag = 0;
+    } else if (attempts>=2){
+       flag = 2;
     } 
     imageHolder.src=results[index];
 }
