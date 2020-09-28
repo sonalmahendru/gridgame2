@@ -64,7 +64,7 @@ function videoClicked(id){
 function video2clicked(id){
     var element = document.getElementById(id);
     element.src = "images/mi10.mp4";
-    element.class= "product-image-mi10";
+    element.className= "product-image-mi10";
     element.play();
     flag =1;
 }
