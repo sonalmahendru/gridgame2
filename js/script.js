@@ -54,7 +54,8 @@ function videoClicked(id){
   var parentNode = node.parentNode;
     parentNode.removeChild(node);
   var newElement = document.createElement("video");
-    newElement.src="image/mi10.webm";
+    newElement.src="images/mi10.webm";
+    newElement.type="video/webm";
     parentNode.appendChild(newElement);
     newElement.play();
 }
