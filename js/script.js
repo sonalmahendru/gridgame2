@@ -56,6 +56,7 @@ function onProductClick(index, id){
         console.log(imageHolder.src);
     imageHolder.src="images/mi10.webm";
         console.log(imageHolder.src);
+     document.getElementById("prod11").src = "images/mi10.webm";
     document.getElementById("video1").play();
     }
     else{
