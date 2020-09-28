@@ -49,6 +49,16 @@ function result_text(){
     document.getElementById("canvas").hidden = true;
 }
 
+function videoClicked(id){
+ var node = document.getElementById(id);
+  var parentNode = node.parentNode;
+    parentNode.removeChild(node);
+  var newElement = document.createElement("video");
+    newElement.src="image/mi10.webm";
+    parentNode.appendChild(newElement);
+    newElement.play();
+}
+
 function onProductClick(index, id){
     if(index==0){
     var imageHolder = document.getElementById("prod1");
