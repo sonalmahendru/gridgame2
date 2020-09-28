@@ -22,7 +22,7 @@ function init_load(){
     var videosrc = document.getElementById("video1"); 
    // videosrc.play();
     var videosrc2 = document.getElementById("video2"); 
-   videosrc2.play();
+  // videosrc2.play();
     
     var game_flag = localStorage.getItem("flag");
     var result = localStorage.getItem("result");
