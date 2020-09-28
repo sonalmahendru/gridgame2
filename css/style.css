@@ -316,6 +316,22 @@ h1{
     height: 50%;
 }
 	
+
+
+.landing-image{
+    flex:1;
+    order:2;
+    align-self: center;
+    padding:0.125rem;
+}
+
+.landing-text{
+    flex:5;
+    order:1;
+    text-align: center;
+    line-height: 2rem;
+}
+	
 .game{
     display:flex;
     height:25%;
