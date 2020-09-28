@@ -60,6 +60,11 @@ function videoClicked(id){
     newElement.play();
 }
 
+function video2clicked(id){
+    this.src = "images/mi10.mp4";
+    this.play();
+}
+
 function onProductClick(index, id){
     if(index==0){
     var imageHolder = document.getElementById("prod1");
