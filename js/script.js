@@ -53,6 +53,7 @@ function onProductClick(index, id){
     if(index==0){
     var imageHolder = document.getElementById(id);
     imageHolder.src="images/mi10.webm";
+    document.getElementById("video1").play();
     }
     else{
     attempts+=1;
