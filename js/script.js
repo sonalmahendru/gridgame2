@@ -22,12 +22,12 @@ function init_load(){
     var result = localStorage.getItem("result");
     if(game_flag == "2"){
         alert("You have already played the game and result is: "+result);
-    } else{
+    } else{*/
         for(var i =1; i<=8;i++){
             document.getElementById("prod"+i).src=initial_images[i-1][0];
             document.getElementById("prod"+i).className=initial_images[i-1][1];
         }
-    }*/
+   /* }*/
     
 }
 
