@@ -276,3 +276,70 @@ main{
     }
     
 }
+
+@media only screen and (max-width: 450px){
+.icon-image{
+    width:95%;
+}
+
+.header{
+    display: flex;
+    height: 10%;
+}
+
+.header div{
+    padding:0.5rem;
+}
+
+.main-content {
+    height: 90%;
+}
+
+.main {
+    height: 50%;
+}
+	
+.game{
+    display:flex;
+    height:20%;
+}
+
+.product-tile{
+    flex:1;
+    text-align: center;
+}
+
+.product-image-mi10{
+    width: 90%;
+}
+
+.product-image-redmi8{
+    width:90%;
+}
+
+.product-image-purifier{
+    width: 90%;
+}
+
+.product-image-trimmer{
+    width: 90%
+}
+
+.product-image-powerbank{
+    width:90%
+}
+
+.product-image-band{
+    width: 90%
+}
+
+.product-image-tv{
+    width: 90%
+}
+
+.product-image-laptop{
+    width:90%
+}
+
+}
+
