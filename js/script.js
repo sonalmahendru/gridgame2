@@ -19,8 +19,10 @@ function play_clicked(){
 
 function init_load(){
     
-    var videosrc = document.getElementById("prod1").addEventListener('click', onProductClick(0,'prod1')); 
-    var videosrc = document.getElementById("prod11").addEventListener('click', onProductClick(0,'prod11')); 
+    var videosrc = document.getElementById("video1"); 
+    videosrc.play();
+    var videosrc2 = document.getElementById("video2"); 
+    videosrc2.play();
     
     var game_flag = localStorage.getItem("flag");
     var result = localStorage.getItem("result");
