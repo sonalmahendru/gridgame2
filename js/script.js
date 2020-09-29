@@ -19,8 +19,8 @@ function play_clicked(){
 
 function init_load(){
     
-    var videosrc = document.getElementById("video1"); 
-   videosrc.play();
+   /* var videosrc = document.getElementById("video1"); 
+   videosrc.play();*/
     var videosrc2 = document.getElementById("video2"); 
   videosrc2.play();
     
@@ -76,13 +76,13 @@ function video2clicked(id){
 function onProductClick(index, id){
     if(index==0){
     var imageHolder = document.getElementById("prod1");
-        console.log(imageHolder);
-        console.log(imageHolder.src);
-        
-        imageHolder.src="images/mi10.webm";
-        console.log(imageHolder.src);
-     document.getElementById("prod11").src = "images/mi10.webm";
-    document.getElementById("video1").play();
+    var parentNode = imageHolder.parentNode;
+        parentNode.removeChild(imageHolder);
+        var newImage = document.createElement("img");
+        newImage.src="images/durga.gif";
+        newImage.className="product-image-mi10";
+        parentNode.appendChild(newImage);
+        flag = 1;
     }
     else{
     attempts+=1;
