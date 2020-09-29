@@ -8,10 +8,15 @@
     src: url(../fonts/proximanova/proximanova-reg-webfont.ttf) format("truetype");
 }
 
+@font-face{
+    font-family: camphor;
+    src: url(../fonts/camphor/CamphorPro-Regular.OTF) format("opentype");
+}
+
 body{
     margin: 0;
     background:#f9e2d3;
-    font-family: proximanova;
+    font-family: camphor;
 }
 
 h1{
@@ -19,7 +24,7 @@ h1{
     font-size: 1.5rem;
     margin: 0;
     text-transform: capitalize;
-    font-family: enchanting;
+    font-family: camphor;
     color: red;
 }
 
@@ -165,7 +170,7 @@ main{
 }
 
 .play{
-    width:15%
+    width:30%
 }
 
 #container {
@@ -249,7 +254,7 @@ main{
 } */
 
 .footer{
-    padding-top:2rem;
+    padding-top:0rem;
     text-align: center;
     padding-bottom: 0rem;
     height: 15vh;
@@ -284,7 +289,7 @@ main{
     }
 
     .play{
-        width:10%
+        width:30%
     }
     
 }

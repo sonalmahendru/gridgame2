@@ -3,10 +3,11 @@ var attempts = 0;
 var initial_images = [["images/mi10.gif","product-image-mi10"],["images/laptop.gif","product-image-laptop"],["images/tv.gif","product-image-tv"],["images/watch.gif","product-image-band"],["images/trimmer.gif","product-image-trimmer"],["images/purifier.gif","product-image-purifier"],["images/powerbank.gif","product-image-powerbank"],["images/note9.gif","product-image-redmi8"]]
 var results = ["images/sandesh1.gif","images/durga.gif","images/sandesh2.gif","images/noluck.gif","images/durga2.gif","images/noluck2.gif","images/sandesh1b.gif","images/sandesh2b.gif"]
 var results_2 = ["images/fruit.png","images/fruit.png"];
-
+var game_flag = localStorage.getItem("flag");
+var result = localStorage.getItem("result");
 shuffle(results);
 shuffle(initial_images);
-var status = setInterval(checkStatus,2000);
+//var status = setInterval(checkStatus,2000);
 
 function download_brochure(){
     //downloadbrochure on loading index.html
@@ -18,23 +19,10 @@ function play_clicked(){
 }
 
 function init_load(){
-    
-   /* var videosrc = document.getElementById("video1"); 
-   videosrc.play();*/
-    var videosrc2 = document.getElementById("video2"); 
-  videosrc2.play();
-    
-    var game_flag = localStorage.getItem("flag");
-    var result = localStorage.getItem("result");
-    if(game_flag == "2"){
-        alert("You have already played the game and result is: "+result);
-    } else{
-        for(var i =3; i<=8;i++){
+        for(var i =1; i<=8;i++){
             document.getElementById("prod"+i).src=initial_images[i-1][0];
             document.getElementById("prod"+i).className=initial_images[i-1][1];
         }
-   }
-    
 }
 
 function result_text(){
@@ -82,17 +70,8 @@ function video2clicked(id){
 }
 
 function onProductClick(index, id){
-    if(index==0){
-    var imageHolder = document.getElementById("prod1");
-    var parentNode = imageHolder.parentNode;
-        parentNode.removeChild(imageHolder);
-        var newImage = document.createElement("img");
-        newImage.src="images/durga.gif";
-        newImage.className="product-image-mi10";
-        parentNode.appendChild(newImage);
-        flag = 1;
-    }
-    else{
+  
+   if(game_flag != 2){
     attempts+=1;
     var imageHolder = document.getElementById(id);
     var parentNode = imageHolder.parentNode;
@@ -107,7 +86,11 @@ function onProductClick(index, id){
     } else if (attempts>2){
        flag = 2;
     } 
-    }
+   } else {
+       alert("You have already played the game. Click Ok to see results.")
+       window.location.href = "win.html";
+   }
+   setInterval(checkStatus,1000);
    
 }
 

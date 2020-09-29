@@ -10,6 +10,8 @@ var snap_button= document.getElementById("snap");
 var share_div = document.getElementById("share");
 var retake_button = document.getElementById("retake");
 retake_button.hidden = true;
+var share_to_facebook = document.getElementById("sharefb");
+//share_to_facebook.hidden = true;
 
 var game_flag = localStorage.getItem("flag");
 var result = localStorage.getItem("result");
@@ -43,6 +45,7 @@ function snap() {
   videoElement.hidden = true;
   canvas.hidden = false;
   retake_button.hidden = false;
+  share_to_facebook.hidden = false;
 };
 
 // Converts canvas to an image
@@ -65,7 +68,7 @@ function retake(){
 function shareToFacebook() {
   share_to_facebook.disabled = true;
   share_to_facebook.innerHTML = '<div class="spinner-border spinner-border-sm text-light" role="status"></div>';
-  var imageData = canvas.toDataURL("images/png");
+  var imageData = user_pic.src;//canvas.toDataURL("images/png");
 
   if (window.XMLHttpRequest) {
     xmlhttp = new XMLHttpRequest();
