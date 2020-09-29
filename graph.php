@@ -28,8 +28,8 @@ $userid = $_GET['userid'];
     <meta property="og:title" content="Hide & Seek with Ganesha" />
     <meta property="og:description" content="Play now to win exciting goodies from Xiaomi!!" />
     <meta property="og:image" content="<?php print('https://'.$_SERVER['HTTP_HOST'].'/user-results/'.$userid.".png"); ?>" />
-    <meta property="og:image:width" content="420"/>
-    <meta property="og:image:height" content="315"/>
+    <meta property="og:image:width" content="600"/>
+    <meta property="og:image:height" content="450"/>
     <title>Capture your image</title>
     <script>
         function switchpage(){

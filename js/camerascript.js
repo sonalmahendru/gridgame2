@@ -67,8 +67,8 @@ function retake(){
 }
 
 function shareToFacebook() {
-  share_to_facebook.disabled = true;
-  share_to_facebook.innerHTML = '<div class="spinner-border spinner-border-sm text-light" role="status"></div>';
+  share_to_facebook.hidden = true;
+  //share_to_facebook.innerHTML = '<div class="spinner-border spinner-border-sm text-light" role="status"></div>';
   var imageData = canvas.toDataURL("images/png");
 
   if (window.XMLHttpRequest) {
@@ -80,8 +80,8 @@ function shareToFacebook() {
   xmlhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
 
-      share_to_facebook.disabled = false;
-      share_to_facebook.innerHTML = 'Share to facebook';
+      share_to_facebook.hidden = false;
+     // share_to_facebook.innerHTML = 'Share to facebook';
       var response = JSON.parse(this.responseText);
 
       if (response.status == 200) {
