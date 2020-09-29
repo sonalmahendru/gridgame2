@@ -82,9 +82,10 @@ function onProductClick(index, id){
         parentNode.appendChild(newImage)
     if((results[index]=="images/durga.gif" || results[index] == "images/durga2.gif") && attempts<=2){//&& attempts<=2
         console.log("won")
-        flag = 1;      
+        flag = 2;      
     } else if (attempts>2){
        flag = 2;
+       alert("You have lost the game!")
     } 
    } else {
        alert("You have already played the game. Click Ok to see results.")
@@ -97,10 +98,10 @@ function onProductClick(index, id){
 
 
 function checkStatus(){
-    if(attempts<2 ){
-        if(flag ==1){
+    if(attempts<=2 ){
+        if(flag ==2){
             alert("Congratulations! You win exciting goodies!!\n Click OK to redeem it!")
-            flag = 2;
+            //flag = 2;
             window.location.href="win.html";
             localStorage.setItem("result","won");
             localStorage.setItem("flag","2")
@@ -109,15 +110,6 @@ function checkStatus(){
         localStorage.setItem("result","lost");
         localStorage.setItem("flag","2");
     } 
-    
-    /*else if(attempts >=8){
-        alert("Click Ok to restart the game");
-        shuffle(results);
-        shuffle(initial_images);
-        init_load();
-        flag = 0;
-        attempts = 0;
-    }*/
 }
 
 
