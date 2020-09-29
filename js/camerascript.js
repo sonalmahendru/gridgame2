@@ -11,7 +11,6 @@ var share_div = document.getElementById("share");
 var retake_button = document.getElementById("retake");
 retake_button.hidden = true;
 var share_to_facebook = document.getElementById("sharefb");
-//share_to_facebook.hidden = true;
 
 var game_flag = localStorage.getItem("flag");
 var result = localStorage.getItem("result");
@@ -35,17 +34,19 @@ function snap() {
     console.log("snapped")
     console.log(videoElement.videoHeight);
     console.log(videoElement.videoWidth);
-    var video_width = videoElement.videoWidth;
-    var video_height = videoElement.videoHeight;
+    var video_width = videoElement.getBoundingClientRect().width;
+    var video_height = videoElement.getBoundingClientRect().height;
 
-  context.drawImage(videoElement, 0, 0, screen.width, screen.height);
+    canvas.height = video_height;
+    canvas.width = video_width;
+
+  context.drawImage(videoElement, 0, 0, canvas.width, canvas.height); //screen.width, screen.height
   user_pic.src = convertCanvasToImage(canvas);
   snap_button.hidden = true;
   share_div.hidden = false;
   videoElement.hidden = true;
   canvas.hidden = false;
   retake_button.hidden = false;
-  share_to_facebook.hidden = false;
 };
 
 // Converts canvas to an image
@@ -58,7 +59,7 @@ function convertCanvasToImage(canvas) {
 }
 
 function retake(){
-  user_pic = null;
+  user_pic = new Image();
   snap_button.hidden = false;
   share_div.hidden = true;
   videoElement.hidden = false;
@@ -68,7 +69,7 @@ function retake(){
 function shareToFacebook() {
   share_to_facebook.disabled = true;
   share_to_facebook.innerHTML = '<div class="spinner-border spinner-border-sm text-light" role="status"></div>';
-  var imageData = user_pic.src;//canvas.toDataURL("images/png");
+  var imageData = canvas.toDataURL("images/png");
 
   if (window.XMLHttpRequest) {
     xmlhttp = new XMLHttpRequest();

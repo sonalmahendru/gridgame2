@@ -180,15 +180,8 @@ main{
 	/*border: 10px #333 solid;*/
 }
 #videoElement {
-	width: 100%;
-	height: 100%;
+	width: 100% !important;
 	/*background-color: #666;*/
-}
-
-#canvas{
-    
-	width: 100%;
-	height: 100%;
 }
 
 .frontpage{
@@ -200,58 +193,6 @@ main{
         background-position: center;
         overflow: hidden;
 }
-
-
-/* 
-.filter{
-    display: flex;
-}
-.filter-image{
-    flex:1.2;
-    align-self: center;
-}
-
-.filter-image-asur{
-    flex:1.2;
-    align-self: center;
-    width: 65%;
-    padding-left: 0.5rem;
-}
-
-.filter-image-khead{
-    flex:1;
-    align-self: center;
-    width: 75%;
-    padding-left: 0.25rem;
-}
-
-.filter-image-kathakali{
-    flex:1;
-    align-self: center;
-    width: 60%;
-    padding-left: 0.75rem;
-}
-
-.filter-image-tiger{
-    flex:1;
-    align-self: center;
-    width: 73%;
-    padding-left: 0.5rem;
-}
-
-.filter-title{
-    flex:5;
-    align-self: center;
-}
-
-.filter-link{
-    flex:1;
-    align-self: center;
-}
-
-.link-image{
-    width:60%
-} */
 
 .footer{
     padding-top:0rem;

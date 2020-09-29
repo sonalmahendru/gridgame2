@@ -22,7 +22,7 @@ $userid = $_GET['userid'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:url" content="<?php print('https://'.$_SERVER['HTTP_HOST'].'/js/graph/'.$userid); ?>" />
+    <meta property="og:url" content="<?php print('https://'.$_SERVER['HTTP_HOST'].'//graph/'.$userid); ?>" />
     <meta property="og:type" content="article" />
     <meta property="fb:app_id" content="826539421486313"/>    
     <meta property="og:title" content="Hide & Seek with Ganesha" />
