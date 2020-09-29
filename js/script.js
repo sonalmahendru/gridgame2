@@ -46,6 +46,14 @@ function result_text(){
             document.getElementById("winning-text").innerText="";
             document.getElementById("container").hidden = true;
         }
+    } else if(game_flag == null || game_flag=="1"){
+        document.getElementById("landing-text-header").innerText="You haven't played the game yet!"
+            var winning_text= document.getElementById("winning-text")
+            winning_text.innerText="Click here to play it";
+            winning_text.addEventListener("click",function(){
+                window.location.href="game.html";
+            })
+            document.getElementById("container").hidden = true;
     }
     document.getElementById("share").hidden = true;
     document.getElementById("canvas").hidden = true;
@@ -95,8 +103,7 @@ function onProductClick(index, id){
         parentNode.appendChild(newImage)
     if((results[index]=="images/durga.gif" || results[index] == "images/durga2.gif") && attempts<=2){//&& attempts<=2
         console.log("won")
-        flag = 1;    
-       // imageHolder.onload = setTimeout(checkResult,500);   
+        flag = 1;      
     } else if (attempts>2){
        flag = 2;
     } 
@@ -104,16 +111,12 @@ function onProductClick(index, id){
    
 }
 
-function checkResult(){
-   if(flag ==1){
-        alert("You have won 10% discount" )
-    }
-}
+
 
 function checkStatus(){
     if(attempts<2 ){
         if(flag ==1){
-            alert("Congratulations! You win 10% discount!!\n Click OK to redeem it!")
+            alert("Congratulations! You win exciting goodies!!\n Click OK to redeem it!")
             flag = 2;
             window.location.href="win.html";
             localStorage.setItem("result","won");
