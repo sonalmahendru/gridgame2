@@ -6,7 +6,7 @@ var results_2 = ["images/fruit.png","images/fruit.png"];
 
 shuffle(results);
 shuffle(initial_images);
-var status = setInterval(checkStatus,1000);
+var status = setInterval(checkStatus,2000);
 
 function download_brochure(){
     //downloadbrochure on loading index.html
