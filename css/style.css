@@ -81,7 +81,7 @@ main{
 
 .winning-text{
     height: 10%;
-    padding: 2rem;
+    padding-top: 1rem;
     text-align: center;
     font-size: 1.2rem;
 }
@@ -210,6 +210,26 @@ main{
         overflow: hidden;
 }
 
+.snap{
+    width: 40%;
+}
+
+.snap-div{
+    text-align: center;
+}
+
+.sharefb{
+    width: 40%
+}
+
+.retake{
+    width: 40%;
+}
+
+.share-socialmedia{
+    text-align: center;
+}
+
 @media only screen and (min-width: 530px){
     main{
         max-width: 500;
@@ -233,7 +253,7 @@ main{
 
     .winning-text{
         height: 10%;
-        padding: 2rem;
+        padding-top: 1rem;
         text-align: center;
         font-size: 1.2rem;
     }

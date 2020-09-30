@@ -47,27 +47,6 @@ function result_text(){
     document.getElementById("canvas").hidden = true;
 }
 
-function videoClicked(id){
- var node = document.getElementById(id);
-  var parentNode = node.parentNode;
-    parentNode.removeChild(node);
-  var newElement = document.createElement("video");
-    newElement.src="images/mi10.webm";
-    newElement.type="video/webm";
-    newElement.className="product-image-mi10";
-    parentNode.appendChild(newElement);
-    newElement.play();
-}
-
-function video2clicked(id){
-    var element = document.getElementById(id);
-    element.src = "images/mi10.mp4";
-    element.className= "product-image-mi10";
-    element.play();
-    if(id=="video2"){
-        flag =1;
-    }
-}
 
 function onProductClick(index, id){
   
@@ -112,7 +91,7 @@ function checkStatus(){
             localStorage.setItem("flag","2")
         }
     } else if(attempts== 2 && flag ==2){
-            alert("Oops! You have used your 2 chances but you can continue finding Durga Ma")
+            alert("Oops! You have used your 2 chances but you can continue finding Durga Maa")
         
     }    
     else{

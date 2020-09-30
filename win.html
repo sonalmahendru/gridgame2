@@ -28,15 +28,17 @@
                   
         </div>
         <div id="container">
-            <video autoplay="true" id="videoElement">
+            <video autoplay="true" id="videoElement" style="border: solid;">
             
             </video>
-            <canvas id="canvas" width="600" height="480"></canvas><!--width="640" height="480"-->
-            <button id="snap" onclick="snap();">Snap Photo</button>
+            <canvas id="canvas" width="600" height="480" style="border: solid;"></canvas><!--width="640" height="480"-->
+            <div id="snap-div" class="snap-div">
+                <img id="snap" src="images/snap.png" class="snap" onclick="snap();"></img>
+            </div>
             <a id="snapped_pic" href="" download></a>
             <div id="share" class="share-socialmedia">
-                <button id="sharefb" onclick="shareToFacebook();">Share on Facebook</button>
-                <button id="retake" onClick="retake()">Retake Photo</button>
+                <img src="images/fbshare.png" id="sharefb" class="sharefb" onclick="shareToFacebook();"></img>
+                <img src="images/retake.png" id="retake" class="retake" onClick="retake()"></img>
             </div>
         </div>
         
