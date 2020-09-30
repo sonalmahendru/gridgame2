@@ -49,7 +49,6 @@ function result_text(){
 
 
 function onProductClick(index, id){
-  
    if(game_flag ==null){
     attempts+=1;
     var imageHolder = document.getElementById(id);
@@ -60,15 +59,14 @@ function onProductClick(index, id){
         newImage.className="product-image-mi10";
         parentNode.appendChild(newImage)
     if((results[index]=="images/durga.gif" || results[index] == "images/durga2.gif") && attempts<=2){//&& attempts<=2
-        console.log("won")
-        flag = 1;      
-    }
-    else if(attempts == 2){
-        flag = 2;
-        alert("Oops! You have used your 2 chances but you can continue finding Durga Ma")
-    } 
-    
-    else if (attempts>2){
+       // console.log("won")
+        localStorage.setItem(flag,"1");   
+        localStorage.setItem("result","won");  
+        flag = 1;
+    }    
+    else if (flag!=1 && flag!=3 && attempts>=2){
+        localStorage.setItem(flag,"2");   
+        localStorage.setItem("result","lost"); 
        flag = 2;
     } 
    } else {
@@ -82,19 +80,20 @@ function onProductClick(index, id){
 
 
 function checkStatus(){
-    if(attempts<=2 ){
         if(flag ==1){
             alert("Congratulations! You win exciting goodies!!\n Click OK to redeem it!")
-            flag = 2;
+            flag = 3;
             window.location.href="win.html";
             localStorage.setItem("result","won");
             localStorage.setItem("flag","2")
         }
-    } else if(attempts== 2 && flag ==2){
+ else if(flag == 2 && attempts== 2){
             alert("Oops! You have used your 2 chances but you can continue finding Durga Maa")
-        
+            localStorage.setItem("result","lost");
+            localStorage.setItem("flag","2");
+            flag = 4;
     }    
-    else{
+    else if(flag==2){
         localStorage.setItem("result","lost");
         localStorage.setItem("flag","2");
     } 
