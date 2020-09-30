@@ -8,25 +8,7 @@
     <title>Hide & Seek with Ganesha</title>
 </head>
 <body onload="result_text()">
-    <script>
-                window.fbAsyncInit = function() {
-  FB.init({
-    appId      : '826539421486313',
-    xfbml      : true,
-    version    : 'v8.0'
-  });
-};
-
-(function(d, s, id){
-   var js, fjs = d.getElementsByTagName(s)[0];
-   if (d.getElementById(id)) {return;}
-   js = d.createElement(s); js.id = id;
-   js.src = "//connect.facebook.net/en_US/sdk.js";
-   fjs.parentNode.insertBefore(js, fjs);
- }(document, 'script', 'facebook-jssdk'));
-
-    </script>
-    <main>
+    <main class="background-main">
         <div class="header" id="landing">
             <div class="landing-image">
                 <img id="logo" src="images/logo.png" alt="Xiaomi" class="icon-image">
