@@ -223,7 +223,7 @@ main{
         -o-background-size: 100% 100%;
         background-size: 100% 100%;
         background-position: center;
-        overflow: hidden;
+        overflow: scroll;
 }
 
 .background-index{
@@ -233,7 +233,7 @@ main{
     -o-background-size: 100% 100%;
     background-size: 100% 100%;
     background-position: center;
-    overflow: hidden;
+    overflow: scroll;
 }
 .snap{
     width: 40%;

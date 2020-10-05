@@ -11,7 +11,7 @@ shuffle(initial_images);
 
 function download_brochure(){
     //downloadbrochure on loading index.html
-    //document.getElementById('downloadLink').click();
+    document.getElementById('downloadLink').click();
 }
 
 function play_clicked(){
