@@ -62,7 +62,7 @@ main{
 
 .header{
     display: flex;
-    height: 10%;
+    height: 20vh;
     justify-content: center;
     align-items: center;
 }
@@ -196,14 +196,19 @@ main{
 }
 
 .frontpage{
-    height: 100vh;
+    height: 50vh;
 }
 
 .footer{
-    padding-top:0rem;
+    padding-top:4rem;
     text-align: center;
     padding-bottom: 0rem;
     height: 15vh;
+}
+
+.footer-text{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .bg-image{
@@ -221,6 +226,15 @@ main{
         overflow: hidden;
 }
 
+.background-index{
+    background: linear-gradient(rgba(255, 255,255, 0.1), rgba(255, 255, 255, 0.1)),url("../images/bg.jpg") no-repeat center center;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-position: center;
+    overflow: hidden;
+}
 .snap{
     width: 40%;
 }
@@ -241,9 +255,50 @@ main{
     text-align: center;
 }
 
+.filter{
+    display: flex;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    justify-items: center;
+    text-align: center;
+}
+
+.filter-image-div{
+    flex:2;
+    align-self: center;
+}
+
+.filter-image{
+    width:100%
+}
+
+.filter-title{
+    flex:3;
+    align-self: center;
+}
+
+.filter-link{
+    flex:1;
+    align-self: center;
+}
+
+.link-image{
+    width:100%
+}
+
+.line{
+    height: 47px;
+    border-bottom: 4px solid #8a0404;
+    flex: auto;
+    }
+
+.playButton{
+    width: 40%
+}
+
 @media only screen and (min-width: 530px){
     main{
-        max-width: 500;
+        max-width: 500px;
     margin: auto;
     box-shadow: 30px 0 40px rgba(0,0,0,0.1),
     -30px 0 40px rgba(0,0,0,0.1);
@@ -300,7 +355,7 @@ h2{
 
 .header{
     display: flex;
-    height: 10%;
+    height: 20vh;
     justify-content: center;
     align-items: center;
 }
