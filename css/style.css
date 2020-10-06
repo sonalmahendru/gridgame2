@@ -196,11 +196,11 @@ main{
 }
 
 .frontpage{
-    height: 50vh;
+    height: fit-content;
 }
 
 .footer{
-    padding-top:4rem;
+    padding-top:1rem;
     text-align: center;
     padding-bottom: 0rem;
     height: 15vh;
