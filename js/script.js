@@ -22,7 +22,7 @@ function download_brochure(){
 	if(os == null){
 		downloadElement.target = "_blank";
         downloadElement.href = "brochure/sample.pdf";
-        downloadElement.download = 'file.pdf';
+        downloadElement.download = null;
        	}else{
         downloadElement.href = "brochure/sample.pdf";
         downloadElement.download = 'file.pdf';
