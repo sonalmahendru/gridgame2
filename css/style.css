@@ -373,7 +373,9 @@ h2{
     height: 50%;
 }
 	
-
+.footer{
+    padding-bottom: 1rem;
+}
 
 .landing-image{
     flex:1;
@@ -432,6 +434,11 @@ h2{
 
 .product-image-laptop{
     width:80%
+}
+
+.filter{
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 }
