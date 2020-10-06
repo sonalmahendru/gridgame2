@@ -11,7 +11,24 @@ shuffle(initial_images);
 
 function download_brochure(){
     //downloadbrochure on loading index.html
-    document.getElementById('downloadLink').click();
+    var os = null;
+    var downloadElement = document.getElementById('downloadLink');
+	if(navigator.userAgent.indexOf("Win") >= 0){
+		os = "Windows";
+	}
+	if(navigator.userAgent.indexOf("Linux") >= 0){
+		os = "Linux";
+	}
+	if(os == null){
+		downloadElement.target = "_blank";
+        downloadElement.href = "brochure/sample.pdf";
+        downloadElement.download = 'file.pdf';
+       	}else{
+        downloadElement.href = "brochure/sample.pdf";
+        downloadElement.download = 'file.pdf';
+	}
+	downloadElement.click();
+    
 }
 
 function play_clicked(){
