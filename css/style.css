@@ -264,7 +264,7 @@ main{
 }
 
 .filter-image-div{
-    flex:2;
+    flex:1;
     align-self: center;
 }
 
@@ -273,7 +273,7 @@ main{
 }
 
 .filter-title{
-    flex:3;
+    flex:4;
     align-self: center;
 }
 
@@ -375,6 +375,7 @@ h2{
 	
 .footer{
     padding-bottom: 1rem;
+    padding-top: 0rem;
 }
 
 .landing-image{
