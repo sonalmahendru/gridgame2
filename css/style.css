@@ -442,5 +442,12 @@ h2{
     padding-right: 1rem;
 }
 
+.line{
+    height: 20px;
+    border-bottom: 4px solid #8a0404;
+    flex: auto;
+    }
+
+
 }
 
