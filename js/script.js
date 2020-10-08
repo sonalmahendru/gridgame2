@@ -21,11 +21,11 @@ function download_brochure(){
 	}
 	if(os == null){
 		downloadElement.target = "_blank";
-        downloadElement.href = "brochure/sample.pdf";
+        downloadElement.href = "brochure/Mi_Products.pdf";
         downloadElement.removeAttribute("download");
        	}else{
-        downloadElement.href = "brochure/sample.pdf";
-        downloadElement.download = 'file.pdf';
+        downloadElement.href = "brochure/Mi_Products.pdf";
+        downloadElement.download = 'Mi_Products.pdf';
 	}
 	downloadElement.click();
     
