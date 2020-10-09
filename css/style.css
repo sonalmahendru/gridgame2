@@ -296,6 +296,11 @@ main{
     width: 40%
 }
 
+video {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+
 @media only screen and (min-width: 530px){
     main{
         max-width: 500px;
