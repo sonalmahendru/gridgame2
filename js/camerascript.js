@@ -16,7 +16,7 @@ var game_flag = localStorage.getItem("flag");
 var result = localStorage.getItem("result");
 
 if(game_flag == 2 && result == "won"){
-  if (navigator.mediaDevices.getUserMedia) {
+  if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
     navigator.mediaDevices.getUserMedia({ video: true })
       .then(function (stream) {
         video.srcObject = stream;
@@ -24,8 +24,9 @@ if(game_flag == 2 && result == "won"){
       .catch(function (err0r) {
         console.log("Something went wrong!");
       });
+  }else{
+    console.log("Can Not access camera");
   }
-  
 }
 
 
