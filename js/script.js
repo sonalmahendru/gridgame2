@@ -1,8 +1,7 @@
 var flag = 0;
 var attempts = 0;
-var initial_images = [["images/mi10.gif","product-image-mi10"],["images/laptop.gif","product-image-laptop"],["images/tv.gif","product-image-tv"],["images/watch.gif","product-image-band"],["images/trimmer.gif","product-image-trimmer"],["images/purifier.gif","product-image-purifier"],["images/powerbank.gif","product-image-powerbank"],["images/note9.gif","product-image-redmi8"]]
-var results = ["images/sandesh1.gif","images/sandesh2.gif","images/noluck.gif","images/durga2.gif","images/noluck2.gif","images/sandesh1b.gif","images/durga.gif","images/sandesh2b.gif"]
-var results_2 = ["images/fruit.png","images/fruit.png"];
+var initial_images = [["images/mi10.gif","product-image-mi10"],["images/laptop.gif","product-image-laptop"],["images/tv.gif","product-image-tv"],["images/watch.gif","product-image-band"],["images/trimmer.gif","product-image-trimmer"],["images/purifier.gif","product-image-purifier"],["images/powerbank.gif","product-image-powerbank"],["images/note9.gif","product-image-redmi8"]];
+var results = ["images/sandesh1.gif","images/sandesh2.gif","images/noluck.gif","images/noluck2.gif","images/sandesh1b.gif","images/durga.gif","images/sandesh2c.gif","images/sandesh2b.gif"];
 var game_flag = localStorage.getItem("flag");
 var result = localStorage.getItem("result");
 shuffle(results);
