@@ -40,8 +40,16 @@ function snap() {
 
     canvas.height = video_height;
     canvas.width = video_width;
-
+  
+    //translate and scale context for a flipped image to be drawn
+    context.translate(canvas.width,0); //move the drawing cursor to the right edge
+    context.scale(-1,1); //flip the image horizontally
+  //Old way of drawing image
+  //context.drawImage(videoElement, 0, 0, canvas.width, canvas.height); //screen.width, screen.height
+  
+ //New way of drawing image flipped to what is seen - turn comments off only when translation and scale is sorted!
   context.drawImage(videoElement, 0, 0, canvas.width, canvas.height); //screen.width, screen.height
+  
   user_pic.src = convertCanvasToImage(canvas);
   snap_button.hidden = true;
   share_div.hidden = false;
