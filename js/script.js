@@ -36,6 +36,8 @@ function play_clicked(){
 }
 
 function init_load(){
+    shuffle(results);
+shuffle(initial_images);
     if(!game_flag){
         download_brochure();
     }
