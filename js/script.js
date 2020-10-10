@@ -33,6 +33,8 @@ function download_brochure(){
 
 function play_clicked(){
     window.location.href="game.html";
+    shuffle(results);
+shuffle(initial_images);
 }
 
 function init_load(){
