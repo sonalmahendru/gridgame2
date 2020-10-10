@@ -360,7 +360,7 @@ h2{
 
 .header{
     display: flex;
-    height: 12vh;
+    height: 20vh;
     justify-content: center;
     align-items: center;
 }
