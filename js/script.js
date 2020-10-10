@@ -1,7 +1,7 @@
 var flag = 0;
 var attempts = 0;
 var initial_images = [["images/mi10.gif","product-image-mi10"],["images/laptop.gif","product-image-laptop"],["images/tv.gif","product-image-tv"],["images/watch.gif","product-image-band"],["images/trimmer.gif","product-image-trimmer"],["images/purifier.gif","product-image-purifier"],["images/powerbank.gif","product-image-powerbank"],["images/note9.gif","product-image-redmi8"]]
-var results = ["images/sandesh1.gif","images/durga.gif","images/sandesh2.gif","images/noluck.gif","images/durga2.gif","images/noluck2.gif","images/sandesh1b.gif","images/sandesh2b.gif"]
+var results = ["images/sandesh1.gif","images/sandesh2.gif","images/noluck.gif","images/durga2.gif","images/noluck2.gif","images/sandesh1b.gif","images/durga.gif","images/sandesh2b.gif"]
 var results_2 = ["images/fruit.png","images/fruit.png"];
 var game_flag = localStorage.getItem("flag");
 var result = localStorage.getItem("result");
@@ -57,6 +57,8 @@ function result_text(){
             document.getElementById("landing-text-header").innerText="Sorry! You have lost this time! Better luck next time!"
             document.getElementById("winning-text").innerText="";
             document.getElementById("container").hidden = true;
+        } else if(result == "won"){
+            document.getElementById("videoElement").autoplay = true;
         }
     } else if(game_flag == null || game_flag=="1"){
         document.getElementById("landing-text-header").innerText="You haven't played the game yet!"
@@ -64,6 +66,8 @@ function result_text(){
             winning_text.innerText="Click here to play it";
             winning_text.addEventListener("click",function(){
                 window.location.href="game.html";
+                shuffle(results);
+                shuffle(initial_images);
             })
             document.getElementById("container").hidden = true;
     }
