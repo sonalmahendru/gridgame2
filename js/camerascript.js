@@ -15,7 +15,7 @@ var share_to_facebook = document.getElementById("sharefb");
 var game_flag = localStorage.getItem("flag");
 var result = localStorage.getItem("result");
 
-if(game_flag == 2 && result == "won"){
+//if(game_flag == 2 && result == "won"){
   if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
     navigator.mediaDevices.getUserMedia({ video: true })
       .then(function (stream) {
@@ -27,7 +27,7 @@ if(game_flag == 2 && result == "won"){
   }else{
     console.log("Can Not access camera");
   }
-}
+//}
 
 
 // Trigger photo take
