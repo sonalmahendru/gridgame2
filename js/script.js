@@ -51,7 +51,7 @@ shuffle(initial_images);
 function result_text(){
    var game_flag = localStorage.getItem("flag");
     var result = localStorage.getItem("result");
-    if(game_flag == "2"){
+    /*if(game_flag == "2"){
         if(result == "lost"){
             document.getElementById("landing-text-header").innerText="Sorry! You have lost this time! Better luck next time!"
             document.getElementById("winning-text").innerText="";
@@ -71,7 +71,7 @@ function result_text(){
             document.getElementById("container").hidden = true;
     }
     document.getElementById("share").hidden = true;
-    document.getElementById("canvas").hidden = true;
+    document.getElementById("canvas").hidden = true;*/
 }
 
 
